@@ -1,0 +1,15 @@
+schema_version = 1
+
+# Example only.
+#
+# [[items]]
+# id = "corpus-000001"
+# state = "queued"
+# priority = 50
+# language = "es"
+# source_kind = "gutenberg"
+# source_ref = "https://www.gutenberg.org/..."
+# title = "..."
+# author = "..."
+# requested_at = "YYYY-MM-DDTHH:MM:SSZ"
+# notes = ""
