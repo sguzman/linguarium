@@ -1,0 +1,19 @@
+schema_version = 1
+id = "ar"
+name = "Arabic"
+status = "bootstrap"
+
+[bootstrap]
+identity = "usable"
+orthography = "partial"
+tokenization = "absent"
+grammar_features = "absent"
+morphology = "absent"
+syntax = "absent"
+phonology = "absent"
+lexical_sources = "absent"
+analysis_capabilities = "absent"
+variety_resolution = "pending"
+
+[orthography]
+primary_script = "Arab"
