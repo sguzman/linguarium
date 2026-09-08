@@ -33,6 +33,9 @@ A contextually distinguishable meaning of a lexeme.
 ### Form
 An inflected, orthographic, phonological, or otherwise realized form associated with a lexeme.
 
+### Paradigm
+A structured family of forms organized by grammatical contrasts. A paradigm is language-specific and may be partial, irregular, defective, or disputed.
+
 ### Morpheme
 A recurrent meaning-bearing or grammatical unit that may participate in forms.
 
@@ -56,10 +59,16 @@ A pronunciation of a form or lexeme, potentially dialect/register specific and r
 ### Concept
 A semantic concept used to relate senses without declaring that words across languages are identical.
 
+### Definition
+A prose explanation of a sense, in a declared language and with provenance.
+
 ### Gloss
 A compact explanatory foothold, usually English by default.
 
 A gloss is not the same thing as a sense and must not be treated as a perfect semantic equivalent.
+
+### EtymologicalRelation
+A provenance-bearing historical relation among lexical entities or forms, including derivation, borrowing, inheritance, or proposed cognacy. Historical uncertainty must remain representable.
 
 ### TranslationRelation
 A context-sensitive relation between source and target spans/entities. It may express equivalence, approximation, explanatory rendering, idiomatic translation, or literal correspondence.
@@ -90,9 +99,11 @@ It should not duplicate dictionary truth.
 ~~~text
 CorpusSource -> CorpusSnapshot -> Document -> Passage -> TokenOccurrence
 TokenOccurrence -> Form? -> Lexeme -> Sense -> Concept?
+Form -> Paradigm*
 Form -> Morpheme*
 Form -> GrammaticalFeature*
 Form/Lexeme -> Pronunciation*
+Sense -> Definition*
 Sense -> Gloss*
 Sense <-> Sense         lexical/semantic relations
 Span <-> Span           translation/alignment relations
