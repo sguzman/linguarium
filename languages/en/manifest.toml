@@ -4,14 +4,16 @@ name = "English"
 status = "bootstrap"
 role_hint = "pivot"
 
-[tokenization]
-strategy = "pending"
+[bootstrap]
+identity = "usable"
+orthography = "partial"
+tokenization = "absent"
+grammar_features = "absent"
+morphology = "absent"
+syntax = "absent"
+phonology = "absent"
+lexical_sources = "absent"
+analysis_capabilities = "absent"
 
 [orthography]
 primary_script = "Latn"
-
-[capabilities]
-morphology = "pending"
-pronunciation = "pending"
-syntax = "pending"
-dictionary_enrichment = "pending"
