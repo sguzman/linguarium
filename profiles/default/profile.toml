@@ -1,18 +1,23 @@
-schema_version = 1
+schema_version = 2
 id = "default"
 semantic_pivot = "en"
+salience_policy = "activity_derived"
 
 [preferences]
 ui = "egui"
 show_ipa_by_default = false
 show_translation_by_default = false
 
+[portfolio]
+non_english_soft_limit = 10
+initial_salience = "neutral"
+derive_tiers_from_activity = true
+
 [[languages]]
 id = "en"
-role = "pivot"
-priority = 100
+membership = "infrastructure_and_learnable"
 
-[languages.proficiency]
+[languages.proficiency.self_reported]
 reading = "native_or_bilingual"
 listening = "native_or_bilingual"
 speaking = "native_or_bilingual"
@@ -20,11 +25,49 @@ writing = "native_or_bilingual"
 
 [[languages]]
 id = "es"
-role = "reference"
-priority = 80
+membership = "portfolio"
 
-[languages.proficiency]
+[languages.proficiency.self_reported]
 reading = "fluent"
 listening = "fluent"
 speaking = "fluent"
 writing = "fluent"
+
+[[languages]]
+id = "de"
+membership = "portfolio"
+
+[[languages]]
+id = "ja"
+membership = "portfolio"
+
+[[languages]]
+id = "zh"
+membership = "portfolio"
+variety_resolution = "pending"
+
+[[languages]]
+id = "he"
+membership = "portfolio"
+variety_resolution = "pending"
+
+[[languages]]
+id = "ru"
+membership = "portfolio"
+
+[[languages]]
+id = "hi"
+membership = "portfolio"
+
+[[languages]]
+id = "ar"
+membership = "portfolio"
+variety_resolution = "pending"
+
+[[languages]]
+id = "it"
+membership = "portfolio"
+
+[[languages]]
+id = "fr"
+membership = "portfolio"
