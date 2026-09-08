@@ -4,6 +4,9 @@ name = "English"
 status = "bootstrap"
 role_hint = "pivot"
 
+# English is an ordinary linguistic pack. Its special workspace roles are
+# declared in data/workspace.toml rather than encoded as special entity types.
+
 [bootstrap]
 identity = "usable"
 orthography = "partial"
