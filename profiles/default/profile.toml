@@ -1,0 +1,30 @@
+schema_version = 1
+id = "default"
+semantic_pivot = "en"
+
+[preferences]
+ui = "egui"
+show_ipa_by_default = false
+show_translation_by_default = false
+
+[[languages]]
+id = "en"
+role = "pivot"
+priority = 100
+
+[languages.proficiency]
+reading = "native_or_bilingual"
+listening = "native_or_bilingual"
+speaking = "native_or_bilingual"
+writing = "native_or_bilingual"
+
+[[languages]]
+id = "es"
+role = "reference"
+priority = 80
+
+[languages.proficiency]
+reading = "fluent"
+listening = "fluent"
+speaking = "fluent"
+writing = "fluent"
