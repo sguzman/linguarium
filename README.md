@@ -81,5 +81,7 @@ Read in order:
 11. `docs/09-ontology-layers.md`
 12. `docs/10-learner-profile.md`
 13. `docs/11-app-and-study-interface.md`
+14. `docs/12-english-special-status.md`
+15. `docs/13-language-portfolio.md`
 
-Machine-readable registries and queues live under `data/`. Per-language specialization lives under `languages/`. Learner-specific declarative state lives under `profiles/`. Repository macro-goals live under `goals/`.
+Machine-readable registries, workspace defaults, and queues live under `data/`. Per-language specialization lives under `languages/`. Learner-specific declarative state lives under `profiles/`. Repository macro-goals live under `goals/`.
