@@ -34,9 +34,17 @@ Do not infer one from the other.
 
 ## Activation
 
-When the principal says something equivalent to “I want to learn A, B, and C,” the director should update the registry, record their roles/priorities, and create or reprioritize relevant macro-goals if tooling support is missing.
+When the principal says something equivalent to “I want to learn A, B, and C,” the director should:
 
-This is a registry update, not an architectural change.
+1. update the registry;
+2. create a minimal language pack if absent;
+3. inspect the language-bootstrap capability matrix;
+4. enqueue missing high-value language work such as orthography, tokenization, grammatical features, paradigms, syntax/constructions, phonology, and source/analyzer declarations;
+5. create or reprioritize engineering macro-goals only when software/tooling support is missing.
+
+Activation therefore creates a language-level work surface even with no corpus yet. It does not automatically create a giant vocabulary list.
+
+Corpus work and language-bootstrap work are separate demand planes. See docs/08-language-bootstrap.md.
 
 ## Variety principle
 
