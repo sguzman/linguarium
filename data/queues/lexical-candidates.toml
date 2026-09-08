@@ -1,0 +1,16 @@
+schema_version = 1
+
+# Lexical candidates are aggregated linguistic work, not token occurrences.
+#
+# [[items]]
+# id = "lexcand-000001"
+# state = "queued"
+# priority = 50
+# language = "es"
+# observed_surface = ["hablábamos"]
+# proposed_lemma = "hablar"
+# corpus_refs = ["corpus-000001"]
+# occurrence_count = 12
+# learner_status = "unknown"
+# confidence = 0.92
+# requested_enrichment = ["sense", "gloss_en", "morphology"]
