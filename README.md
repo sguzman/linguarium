@@ -76,5 +76,6 @@ Read in order:
 6. `docs/04-language-universe.md`
 7. `docs/05-artifacts-and-provenance.md`
 8. `docs/06-queues-and-lifecycle.md`
+9. `docs/07-language-packs.md`
 
-Machine-readable registries and queues live under `data/`. Repository macro-goals live under `goals/`.
+Machine-readable registries and queues live under `data/`. Per-language specialization lives under `languages/`. Repository macro-goals live under `goals/`.
