@@ -58,6 +58,7 @@ The operational database keeps:
 A profile may assign each language:
 
 - role: pivot / active / reference / candidate / dormant;
+- interest tier for non-English portfolio languages;
 - explicit priority weight;
 - proficiency estimates by modality;
 - desired study modes;
@@ -85,6 +86,19 @@ priority = 40
 [languages.proficiency]
 reading = "fluent"
 ~~~
+
+## Interest tiers
+
+For bounded attention management, non-English portfolio languages may be grouped as:
+- Tier 1: focus;
+- Tier 2: active;
+- Tier 3: exploratory/reference.
+
+Interest tier is independent of proficiency and may change without deleting learner history.
+
+English does not consume one of the suggested ten non-English portfolio slots because it is permanently available as interface/meta/pivot language and as a normal learnable language.
+
+See docs/13-language-portfolio.md.
 
 ## Relative priority
 
