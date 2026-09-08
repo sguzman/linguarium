@@ -16,50 +16,43 @@ English does not consume one of these slots because it is permanently available 
 
 Ten is an attention-management convention, not a technical hard limit.
 
-## Interest tiers
+## Portfolio membership is explicit
 
-Each portfolio language receives an explicit interest tier independent of proficiency.
+The learner chooses which languages belong in the portfolio.
 
-### Tier 1 — focus
+That is the main stable interest input.
 
-Languages the learner actively wants to make meaningful progress in now.
+The learner is not required to rank them.
 
-These receive the strongest default priority for:
-- language bootstrap;
-- corpus processing;
-- lexical enrichment;
-- study queue generation;
-- UI prominence.
+## Interest tiers are revealed
 
-Recommended initial size: 2–3.
+Labels such as Focus / Active / Background are derived from recent and sustained activity rather than manually assigned by default.
 
-### Tier 2 — active
+The system should infer relative salience from:
+- reading;
+- lookups;
+- reviews;
+- language-specific sessions;
+- lexical/corpus activity;
+- other learner actions.
 
-Languages the learner seriously wants to develop, but below immediate focus.
+Use decay and hysteresis so tiers respond to real shifts without constantly flapping.
 
-Recommended initial size: 3–4.
-
-### Tier 3 — exploratory/reference
-
-Languages worth keeping in the universe for future study, comparison, curiosity, or maintenance, but which should not consume much automatic work.
-
-Recommended initial size: remaining portfolio slots.
-
-A language can move between tiers without losing data or history.
+See docs/14-revealed-language-salience.md.
 
 ## Interest is not proficiency
 
-A highly fluent language can be Tier 1.
-A completely new language can be Tier 3.
+A highly fluent language can become the most salient language.
+A completely new language can also become the most salient language.
 
-Interest controls resource allocation.
+Salience controls resource allocation.
 Proficiency models learner capability.
 
 Do not collapse them.
 
 ## Proficiency is provisional and discoverable
 
-The profile may begin with rough self-estimates.
+The profile may begin with rough self-estimates or unknown values.
 
 Over time, the operational system can accumulate evidence by modality:
 - reading comprehension;
@@ -75,19 +68,13 @@ The system should become more accurate about proficiency through use rather than
 
 ## Portfolio operation
 
-When the principal supplies a list such as:
+When the principal supplies an unordered list of languages, the director should:
 
-~~~text
-Tier 1: German, Russian, Japanese
-Tier 2: French, Latin, Portuguese
-Tier 3: Italian, Greek, Mandarin, Arabic
-~~~
-
-the director should:
 1. register missing languages;
 2. create minimal language packs;
-3. update the learner profile interest tiers/priorities;
+3. add them to the learner portfolio with neutral initial salience;
 4. enqueue appropriate bootstrap work;
-5. avoid exhaustive lexical population until corpora or learner demand justify it.
+5. avoid exhaustive lexical population until corpora or learner demand justify it;
+6. let activity reveal relative tiers over time.
 
-The learner should not need to supply grammar facts, scripts, tokenizers, or dictionary sources.
+The learner should not need to supply grammar facts, scripts, tokenizers, dictionary sources, or an explicit ordering.
