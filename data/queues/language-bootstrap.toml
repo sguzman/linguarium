@@ -1,13 +1,85 @@
 schema_version = 1
 
 # Language-level work exists independently of any particular corpus.
-#
-# [[items]]
-# id = "langboot-000001"
-# state = "queued"
-# priority = 80
-# language = "de"
-# dimension = "morphology"
-# capability = "paradigm_system"
-# requested_outputs = ["feature_inventory", "inflection_classes", "source_manifest", "tests"]
-# origin = "language_activation"
+# Portfolio languages begin at neutral salience; processing order may later
+# use activity-derived salience from the operational learner database.
+
+[[items]]
+id = "langboot-es-foundation"
+state = "queued"
+language = "es"
+dimension = "foundation"
+requested_outputs = ["orthography", "tokenization", "grammar_features", "morphology", "syntax", "phonology", "lexical_sources", "analysis_capabilities"]
+origin = "portfolio_activation"
+
+[[items]]
+id = "langboot-de-foundation"
+state = "queued"
+language = "de"
+dimension = "foundation"
+requested_outputs = ["identity", "orthography", "tokenization", "grammar_features", "morphology", "syntax", "phonology", "lexical_sources", "analysis_capabilities"]
+origin = "portfolio_activation"
+
+[[items]]
+id = "langboot-ja-foundation"
+state = "queued"
+language = "ja"
+dimension = "foundation"
+requested_outputs = ["identity", "orthography", "tokenization", "grammar_features", "morphology", "syntax", "phonology", "lexical_sources", "analysis_capabilities"]
+origin = "portfolio_activation"
+
+[[items]]
+id = "langboot-zh-foundation"
+state = "queued"
+language = "zh"
+dimension = "foundation"
+requested_outputs = ["identity", "variety_resolution", "orthography", "tokenization", "grammar_features", "morphology", "syntax", "phonology", "lexical_sources", "analysis_capabilities"]
+origin = "portfolio_activation"
+
+[[items]]
+id = "langboot-he-foundation"
+state = "queued"
+language = "he"
+dimension = "foundation"
+requested_outputs = ["identity", "variety_resolution", "orthography", "tokenization", "grammar_features", "morphology", "syntax", "phonology", "lexical_sources", "analysis_capabilities"]
+origin = "portfolio_activation"
+
+[[items]]
+id = "langboot-ru-foundation"
+state = "queued"
+language = "ru"
+dimension = "foundation"
+requested_outputs = ["identity", "orthography", "tokenization", "grammar_features", "morphology", "syntax", "phonology", "lexical_sources", "analysis_capabilities"]
+origin = "portfolio_activation"
+
+[[items]]
+id = "langboot-hi-foundation"
+state = "queued"
+language = "hi"
+dimension = "foundation"
+requested_outputs = ["identity", "orthography", "tokenization", "grammar_features", "morphology", "syntax", "phonology", "lexical_sources", "analysis_capabilities"]
+origin = "portfolio_activation"
+
+[[items]]
+id = "langboot-ar-foundation"
+state = "queued"
+language = "ar"
+dimension = "foundation"
+requested_outputs = ["identity", "variety_resolution", "orthography", "tokenization", "grammar_features", "morphology", "syntax", "phonology", "lexical_sources", "analysis_capabilities"]
+origin = "portfolio_activation"
+
+[[items]]
+id = "langboot-it-foundation"
+state = "queued"
+language = "it"
+dimension = "foundation"
+requested_outputs = ["identity", "orthography", "tokenization", "grammar_features", "morphology", "syntax", "phonology", "lexical_sources", "analysis_capabilities"]
+origin = "portfolio_activation"
+
+[[items]]
+id = "langboot-fr-foundation"
+state = "queued"
+language = "fr"
+dimension = "foundation"
+requested_outputs = ["identity", "orthography", "tokenization", "grammar_features", "morphology", "syntax", "phonology", "lexical_sources", "analysis_capabilities"]
+origin = "portfolio_activation"
