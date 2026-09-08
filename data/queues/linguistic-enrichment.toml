@@ -1,0 +1,14 @@
+schema_version = 1
+
+# Corpus- or language-driven grammar/syntax/phonology work that is not
+# naturally owned by a single lexeme.
+#
+# [[items]]
+# id = "lingenrich-000001"
+# state = "queued"
+# priority = 50
+# language = "de"
+# target_kind = "construction"
+# target_ref = "..."
+# requested_dimensions = ["syntax", "semantics"]
+# corpus_refs = []
