@@ -80,8 +80,9 @@ Responsibilities:
 Control plane.
 
 Responsibilities:
-- activate/demote languages;
-- set explicit priority;
+- add/remove portfolio languages;
+- show activity-derived salience and revealed tier;
+- offer optional temporary focus overrides without requiring manual ranking;
 - inspect capability maturity;
 - inspect missing bootstrap work;
 - set profile preferences;
