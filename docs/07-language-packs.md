@@ -101,6 +101,14 @@ A form may have multiple analyses when ambiguity is real.
 
 ## Pack lifecycle
 
-A language can enter the workspace with a minimal pack containing only identity and basic tokenization. The pack becomes richer as corpora demand more structure.
+A language can enter the workspace with a minimal pack containing only identity. Activation creates explicit bootstrap work across independent capability dimensions.
+
+The pack becomes richer from both:
+- language-level bootstrap work, which can happen before any corpus exists; and
+- corpus-driven demand, which reveals which lexical forms, constructions, ambiguities, and analyses matter in practice.
+
+Conjugation/declension systems belong to the language pack as paradigm/inflection structure. Individual lexemes and observed forms belong to the shared operational data model.
+
+See docs/08-language-bootstrap.md for the full work surface and lifecycle.
 
 This is the language-level form of Linguarium's incrementality doctrine.
