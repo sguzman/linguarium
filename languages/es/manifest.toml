@@ -1,0 +1,17 @@
+schema_version = 1
+id = "es"
+name = "Spanish"
+status = "bootstrap"
+role_hint = "reference"
+
+[tokenization]
+strategy = "pending"
+
+[orthography]
+primary_script = "Latn"
+
+[capabilities]
+morphology = "pending"
+pronunciation = "pending"
+syntax = "pending"
+dictionary_enrichment = "pending"
