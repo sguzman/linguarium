@@ -1,0 +1,13 @@
+schema_version = 1
+
+# Language-level work exists independently of any particular corpus.
+#
+# [[items]]
+# id = "langboot-000001"
+# state = "queued"
+# priority = 80
+# language = "de"
+# dimension = "morphology"
+# capability = "paradigm_system"
+# requested_outputs = ["feature_inventory", "inflection_classes", "source_manifest", "tests"]
+# origin = "language_activation"
