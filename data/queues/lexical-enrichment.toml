@@ -1,0 +1,9 @@
+schema_version = 1
+
+# [[items]]
+# id = "lexenrich-000001"
+# state = "queued"
+# priority = 50
+# language = "es"
+# target_lexeme_id = "..."
+# requested_dimensions = ["senses", "gloss_en", "morphology", "pronunciation"]
