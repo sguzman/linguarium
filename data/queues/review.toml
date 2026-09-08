@@ -1,0 +1,10 @@
+schema_version = 1
+
+# [[items]]
+# id = "review-000001"
+# state = "queued"
+# priority = 50
+# target_kind = "sense"
+# target_id = "..."
+# proposal_ref = "..."
+# reason = "Machine-proposed gloss is ambiguous."
