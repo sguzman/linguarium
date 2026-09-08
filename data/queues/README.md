@@ -4,9 +4,13 @@ These files bootstrap Linguarium's high-volume work contracts before the operati
 
 They are not intended to remain the final queue backend.
 
-- corpus-intake.toml — source material waiting for ingestion.
-- lexical-candidates.toml — aggregated lexical work discovered from corpora.
-- review.toml — semantic analyses requiring adjudication.
+- corpus-intake.toml — raw source material waiting for snapshot creation.
+- corpus-analysis.toml — snapshots waiting for segmentation/tokenization/statistics.
+- lexical-candidates.toml — aggregated unresolved lexical work discovered from corpora.
+- lexical-enrichment.toml — integrated lexemes waiting for richer linguistic data.
+- alignment.toml — spans/entities waiting for cross-language correspondence work.
+- review.toml — proposed semantic analyses requiring adjudication.
+- correction.toml — accepted entities that must be repaired while preserving lineage.
 
 Do not create one GitHub issue per record.
 
