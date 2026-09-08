@@ -15,7 +15,7 @@ It does not store learner proficiency or current learning priority.
 
 ## Learner/profile universe
 
-Learner-specific role, interest tier, priority, proficiency, and focus live under profiles/, initially profiles/default/profile.toml. English's workspace-wide interface/meta/pivot defaults live separately in data/workspace.toml.
+Learner-specific portfolio membership and stable preferences live under profiles/, initially profiles/default/profile.toml. Volatile activity-derived salience, revealed tiers, and evidence-derived proficiency belong in the operational database. English's workspace-wide interface/meta/pivot defaults live separately in data/workspace.toml.
 
 Roles include:
 
@@ -60,7 +60,7 @@ Corpus work and language-bootstrap work are separate demand planes. Learner prio
 
 ## Bounded portfolio
 
-The recommended starting universe is not every known language. Use a bounded non-English portfolio, initially at most ten languages, grouped into interest tiers.
+The recommended starting universe is not every known language. Use a bounded non-English portfolio, initially at most ten languages. Portfolio membership is explicit; relative tiers are normally revealed from activity rather than manually assigned.
 
 English remains outside that attention cap because it is both infrastructure and a learnable first-class language.
 
@@ -68,11 +68,9 @@ See docs/13-language-portfolio.md.
 
 ## Relative focus
 
-When the principal says “I care more about German right now,” that is primarily a profile update.
+The default policy does not ask the principal to rank languages. Relative focus is revealed from activity using decayed salience and hysteresis.
 
-German's explicit priority/focus rises. Other languages become relatively less urgent without losing their ontology or learner history.
-
-Usage-derived signals may later influence effective priority, but explicit principal intent outranks inferred behavior.
+An explicit statement such as “focus German today” is treated as an optional bounded override, not as required long-lived configuration.
 
 ## Variety principle
 
