@@ -1,7 +1,7 @@
 # Linguarium workspace language registry.
-# Learner role, priority, and proficiency belong in profiles/, not here.
+# Learner portfolio membership and proficiency belong in profiles/, not here.
 
-schema_version = 2
+schema_version = 3
 
 [[languages]]
 id = "en"
@@ -13,4 +13,61 @@ status = "registered"
 id = "es"
 name = "Spanish"
 pack = "languages/es"
+status = "registered"
+
+[[languages]]
+id = "de"
+name = "German"
+pack = "languages/de"
+status = "registered"
+
+[[languages]]
+id = "ja"
+name = "Japanese"
+pack = "languages/ja"
+status = "registered"
+
+[[languages]]
+id = "zh"
+name = "Chinese"
+pack = "languages/zh"
+status = "registered"
+variety_resolution = "pending"
+
+[[languages]]
+id = "he"
+name = "Hebrew"
+pack = "languages/he"
+status = "registered"
+variety_resolution = "pending"
+
+[[languages]]
+id = "ru"
+name = "Russian"
+pack = "languages/ru"
+status = "registered"
+
+[[languages]]
+id = "hi"
+name = "Hindi"
+pack = "languages/hi"
+status = "registered"
+
+[[languages]]
+id = "ar"
+name = "Arabic"
+pack = "languages/ar"
+status = "registered"
+variety_resolution = "pending"
+
+[[languages]]
+id = "it"
+name = "Italian"
+pack = "languages/it"
+status = "registered"
+
+[[languages]]
+id = "fr"
+name = "French"
+pack = "languages/fr"
 status = "registered"
