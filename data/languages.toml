@@ -1,0 +1,32 @@
+# Linguarium language universe.
+# This declares workspace roles and priorities; it is not a universal list
+# of languages supported by future software.
+
+schema_version = 1
+default_pivot = "en"
+
+[[languages]]
+id = "en"
+name = "English"
+role = "pivot"
+priority = 100
+proficiency = "native_or_bilingual"
+notes = "Default interlingual semantic foothold. English is not the ontology."
+
+[[languages]]
+id = "es"
+name = "Spanish"
+role = "reference"
+priority = 80
+proficiency = "fluent"
+notes = "Strong language available for reading and comparative use. Role may be changed independently of proficiency."
+
+# Add target languages when the principal declares them.
+#
+# Example:
+# [[languages]]
+# id = "de"
+# name = "German"
+# role = "active"
+# priority = 90
+# proficiency = "beginner"
