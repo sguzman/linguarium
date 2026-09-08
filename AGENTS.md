@@ -82,6 +82,14 @@ A corpus is useful before every word is integrated. A lexeme is useful before ev
 
 Semantic corrections preserve identity and lineage where possible. Do not mint a new entity merely to repair a bad gloss, analysis, or relation unless the earlier entity was genuinely a different thing.
 
+## Application stack rule
+
+The native desktop application uses Rust + egui/eframe unless the director deliberately supersedes this decision.
+
+The GUI is a projection layer. It may not become a second canonical ontology or duplicate durable lexical/grammatical truth in widget-local models.
+
+Learner-specific priority, proficiency, preferences, and study state must remain separable from shared linguistic truth. Stable declarative profile intent belongs under profiles/; volatile operational usage/review state belongs in the application database once available.
+
 ## Human execution rule
 
 Normal development and QA must be repository-native. Encode dependencies and stable entrypoints in the repository. On Windows, use Scoop for ordinary CLI dependencies when appropriate. Nix/mise remain latent future options unless doctrine changes.
