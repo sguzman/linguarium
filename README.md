@@ -83,5 +83,6 @@ Read in order:
 13. `docs/11-app-and-study-interface.md`
 14. `docs/12-english-special-status.md`
 15. `docs/13-language-portfolio.md`
+16. `docs/14-revealed-language-salience.md`
 
 Machine-readable registries, workspace defaults, and queues live under `data/`. Per-language specialization lives under `languages/`. Learner-specific declarative state lives under `profiles/`. Repository macro-goals live under `goals/`.
