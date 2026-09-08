@@ -4,10 +4,12 @@ These files bootstrap Linguarium's high-volume work contracts before the operati
 
 They are not intended to remain the final queue backend.
 
+- language-bootstrap.toml — language-level capability work created by activation.
 - corpus-intake.toml — raw source material waiting for snapshot creation.
 - corpus-analysis.toml — snapshots waiting for segmentation/tokenization/statistics.
 - lexical-candidates.toml — aggregated unresolved lexical work discovered from corpora.
 - lexical-enrichment.toml — integrated lexemes waiting for richer linguistic data.
+- linguistic-enrichment.toml — nonlexical grammar/syntax/phonology/construction work.
 - alignment.toml — spans/entities waiting for cross-language correspondence work.
 - review.toml — proposed semantic analyses requiring adjudication.
 - correction.toml — accepted entities that must be repaired while preserving lineage.
