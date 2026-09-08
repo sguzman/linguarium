@@ -252,9 +252,10 @@ When the principal declares a language as active/reference:
 1. add/update data/languages.toml;
 2. create its language-pack manifest if absent;
 3. inspect the bootstrap capability matrix;
-4. enqueue missing high-value bootstrap dimensions;
-5. create engineering macro-goals only when new software/tooling is actually required;
-6. do not fabricate a giant vocabulary list merely because the language was activated.
+4. enqueue missing high-value bootstrap dimensions at neutral initial salience;
+5. let operational learner activity later influence processing order through revealed salience;
+6. create engineering macro-goals only when new software/tooling is actually required;
+7. do not fabricate a giant vocabulary list merely because the language was activated.
 
 If a corpus arrives in an undeclared language, intake may create a provisional language declaration and block only the analysis stages that truly require missing language support.
 
