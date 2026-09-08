@@ -15,7 +15,7 @@ It does not store learner proficiency or current learning priority.
 
 ## Learner/profile universe
 
-Learner-specific role, priority, proficiency, and focus live under profiles/, initially profiles/default/profile.toml.
+Learner-specific role, interest tier, priority, proficiency, and focus live under profiles/, initially profiles/default/profile.toml. English's workspace-wide interface/meta/pivot defaults live separately in data/workspace.toml.
 
 Roles include:
 
@@ -57,6 +57,14 @@ When the principal says something equivalent to â€œI want to learn A, B, and C,â
 Activation therefore creates a language-level work surface even with no corpus yet. It does not automatically create a giant vocabulary list.
 
 Corpus work and language-bootstrap work are separate demand planes. Learner priority is a third demand plane. See docs/08-language-bootstrap.md and docs/10-learner-profile.md.
+
+## Bounded portfolio
+
+The recommended starting universe is not every known language. Use a bounded non-English portfolio, initially at most ten languages, grouped into interest tiers.
+
+English remains outside that attention cap because it is both infrastructure and a learnable first-class language.
+
+See docs/13-language-portfolio.md.
 
 ## Relative focus
 
