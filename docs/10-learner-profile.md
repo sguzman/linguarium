@@ -14,13 +14,12 @@ Examples:
 ## Learner/profile state
 
 Examples:
-- German is currently high priority;
-- Spanish is fluent/reference-level;
-- Japanese reading is weak;
+- German is in the learner's portfolio;
+- Japanese has high current revealed salience;
+- Spanish reading is fluent;
 - a particular lexeme is well recognized but poorly produced;
 - the learner prefers IPA visible by default;
-- current study workload target is 20 reviews;
-- one language is temporarily demoted.
+- one language has a temporary focus override.
 
 These facts belong to a LearnerProfile.
 
@@ -37,112 +36,85 @@ profiles/default/
     profile.toml
 ~~~
 
-Large/volatile operational learner data should eventually live in the application database, not be committed to Git on every review event.
+Large/volatile operational learner data should eventually live in the application database, not be committed to Git on every event.
 
 The repository keeps:
-- profile schema/configuration;
+- portfolio membership;
 - stable declarative preferences;
+- optional coarse self-reported proficiency;
 - migration contracts;
 - optional export/import snapshots.
 
 The operational database keeps:
+- activity events;
+- derived salience;
+- revealed tier;
 - review history;
 - knowledge states;
-- usage events;
 - scheduling state;
 - reading progress;
+- evidence-derived proficiency;
 - high-frequency changing learner data.
 
-## Language interest model
+## Portfolio membership
 
-A profile may assign each language:
+Membership is the main explicit language-interest input.
 
-- role: pivot / active / reference / candidate / dormant;
-- interest tier for non-English portfolio languages;
-- explicit priority weight;
-- proficiency estimates by modality;
-- desired study modes;
-- optional temporary focus boost.
+The learner may simply say:
 
-Example:
+> These are the languages I care about.
 
-~~~toml
-[[languages]]
-id = "de"
-role = "active"
-priority = 100
+No ordering or numeric priority is required.
 
-[languages.proficiency]
-reading = "beginner"
-listening = "beginner"
-speaking = "beginner"
-writing = "beginner"
+## Revealed salience
 
-[[languages]]
-id = "es"
-role = "reference"
-priority = 40
+Relative language attention is normally inferred from usage rather than manually ranked.
 
-[languages.proficiency]
-reading = "fluent"
-~~~
+Activity-derived salience may use:
+- reading;
+- reviews;
+- lookups;
+- language-specific sessions;
+- corpus operations;
+- learning failures/successes.
 
-## Interest tiers
+Salience decays over time and uses hysteresis so the UI does not constantly reshuffle from trivial short-term activity.
 
-For bounded attention management, non-English portfolio languages may be grouped as:
-- Tier 1: focus;
-- Tier 2: active;
-- Tier 3: exploratory/reference.
+Derived labels such as Focus / Active / Background are projections over salience, not durable profile facts.
 
-Interest tier is independent of proficiency and may change without deleting learner history.
+See docs/14-revealed-language-salience.md.
 
-English does not consume one of the suggested ten non-English portfolio slots because it is permanently available as interface/meta/pivot language and as a normal learnable language.
+## Optional explicit focus
 
-See docs/13-language-portfolio.md.
+The learner may still issue bounded overrides such as:
+- “Focus Russian today.”
+- “Keep Arabic in the background.”
+- “Surface more Japanese this week.”
 
-## Relative priority
+These are optional conveniences, never required configuration homework.
 
-When the principal says:
+## Proficiency
 
-> I care more about German right now.
+Proficiency is separate from both portfolio membership and salience.
 
-the director/profile layer should increase German's explicit priority or focus boost and thereby relatively demote competing work.
+The system may begin with:
+- a rough self-report;
+- unknown;
+- existing strong evidence.
 
-This affects:
-- corpus processing order;
-- lexical enrichment queues;
-- language-bootstrap work;
-- study scheduling;
-- suggested reading;
-- UI prominence.
+Over time it should discover competence by modality from actual use.
 
-It must not rewrite objective linguistic data.
+Explicit self-report and evidence-derived estimates should remain distinguishable.
 
-## Usage-derived signals
+## English
 
-Linguarium may infer *signals* from behavior:
-- recent reading time;
-- reviews completed;
-- corpus opens;
-- lookup frequency;
-- failure rate;
-- repeated unknown words.
+English is permanently available as:
+- interface language;
+- metalanguage;
+- semantic pivot;
+- ordinary learnable language.
 
-But usage must not silently override explicit intent.
-
-Priority should conceptually combine:
-
-~~~text
-effective_priority =
-    explicit_profile_priority
-  + temporary_focus_boost
-  + bounded_usage_signal
-  + current_learning_need
-~~~
-
-The exact scoring policy is implementation work.
-
-Explicit principal intent outranks inferred usage.
+English may also accumulate learner knowledge state and English-study salience, but its infrastructure roles do not depend on activity.
 
 ## Profile portability
 
