@@ -1,0 +1,8 @@
+schema_version = 1
+
+# [[items]]
+# id = "corpus-analysis-000001"
+# state = "queued"
+# priority = 50
+# snapshot_id = "..."
+# requested_steps = ["segment", "tokenize", "frequency", "lexical_candidates"]
