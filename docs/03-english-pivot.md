@@ -60,3 +60,18 @@ English glosses help humans navigate the relation but do not create it automatic
 ## Future multilingual glossing
 
 Direct Spanish-to-French, Japanese-to-Chinese, and other non-English glosses are permitted later because they may expose useful structural relationships. They are optional enrichment, not baseline completeness requirements.
+
+
+## Special operational status
+
+English is not merely one random target among peer languages in the initial Linguarium workspace.
+
+It also serves as:
+- the default interface language;
+- the human-readable metalanguage for grammar/ontology explanations;
+- the default gloss language;
+- the default semantic pivot.
+
+These operational roles are declared separately from English linguistic data so English remains a normal first-class language that can itself be read, catalogued, and studied.
+
+See docs/12-english-special-status.md.
