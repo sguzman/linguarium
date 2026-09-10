@@ -1,11 +1,46 @@
 # 01 — Foundational Ontology
 
-This document defines the initial conceptual entities. It is deliberately extensible: languages are allowed to falsify or refine the model.
+This document defines Linguarium's initial conceptual entities. It is deliberately extensible: languages, corpora, historical evidence, and learner use are allowed to falsify or refine the model.
 
-## Identity layers
+## Language-world identity
+
+### LanguageFamily
+A genealogical grouping whose members are proposed to descend from a common ancestral linguistic system.
+
+Family membership and branching are claims with provenance rather than immutable labels.
+
+### WritingSystem
+A conventional system for representing language graphically.
+
+Languages and writing systems are many-to-many over history. More specific concepts such as Script, Orthography, GraphemeInventory, and transliteration systems may be modeled beneath or beside this category when demanded.
+
+### ReconstructedLanguage
+A linguistic system inferred from comparative/historical evidence rather than directly attested as a complete language.
+
+Reconstructed entities carry explicit epistemic status and may participate in ancestry/family relations without being treated as directly observed historical recordings.
 
 ### Language
-A named linguistic system or variety used as the scope for lexical and grammatical entities.
+A canonical umbrella node for a conventionally recognized language-level linguistic system.
+
+A Language is not assumed to be internally homogeneous and does not require a designated dialect.
+
+### LanguageVariety
+An abstract category for a coherent variety associated with a Language or language lineage.
+
+### Dialect
+A synchronic LanguageVariety conventionally organized beneath a Language.
+
+Dialect status does not imply inferiority, corruption, or reduced complexity.
+
+### StandardVariety
+A LanguageVariety with an institutional, literary, administrative, educational, liturgical, or other standardizing role.
+
+### HistoricalStage
+A diachronically bounded LanguageVariety representing a historical stage of a Language or language lineage.
+
+Language/dialect/variety classification is explicitly fuzzy and may be conventional or sociopolitically influenced. See docs/16-language-dialect-policy.md.
+
+## Corpus identity
 
 ### CorpusSource
 Where material came from: Gutenberg URL, pasted text, subtitle file, local import, transcription, etc.
@@ -24,8 +59,10 @@ A span occurring at a specific location in a specific snapshot.
 
 A token occurrence is not a word in the dictionary sense.
 
+## Lexical and grammatical identity
+
 ### Lexeme
-An abstract lexical unit conventionally grouped under a lemma.
+An abstract lexical unit conventionally grouped under a lemma and scoped to a Language/LanguageVariety where appropriate.
 
 ### Sense
 A contextually distinguishable meaning of a lexeme.
@@ -56,6 +93,8 @@ A contrastive phonological unit within a language/variety.
 ### Pronunciation
 A pronunciation of a form or lexeme, potentially dialect/register specific and representable with IPA and audio.
 
+## Semantic and historical relations
+
 ### Concept
 A semantic concept used to relate senses without declaring that words across languages are identical.
 
@@ -76,10 +115,12 @@ A context-sensitive relation between source and target spans/entities. It may ex
 ### Alignment
 A correspondence between spans or linguistic features. Alignment is many-to-many and may occur at passage, phrase, token, morpheme, or feature level.
 
-### LearnerProfile
-The identity to which personal acquisition state belongs.
+## Learner identity
 
-The foundation may assume one local learner while retaining the conceptual boundary.
+### LearnerProfile
+The identity to which personal acquisition state and stable preferences belong.
+
+The foundation assumes one local learner while retaining the conceptual boundary.
 
 ### KnowledgeState
 The learner's current relationship to an entity.
@@ -97,6 +138,11 @@ It should not duplicate dictionary truth.
 ## Core relations
 
 ~~~text
+LanguageFamily <-> Language / ReconstructedLanguage
+Language -> Dialect / StandardVariety / HistoricalStage
+Language / LanguageVariety <-> WritingSystem
+ReconstructedLanguage -> reconstructed ancestry/family relations
+
 CorpusSource -> CorpusSnapshot -> Document -> Passage -> TokenOccurrence
 TokenOccurrence -> Form? -> Lexeme -> Sense -> Concept?
 Form -> Paradigm*
@@ -107,6 +153,8 @@ Sense -> Definition*
 Sense -> Gloss*
 Sense <-> Sense         lexical/semantic relations
 Span <-> Span           translation/alignment relations
+
+LearnerProfile -> preferred Language/Variety/Stage*
 LearnerProfile -> KnowledgeState -> linguistic entity
 LearningEvidence -> KnowledgeState
 StudyItem -> linguistic entities / corpus spans
@@ -114,12 +162,25 @@ StudyItem -> linguistic entities / corpus spans
 
 ## Separation invariants
 
-Do not collapse occurrence and form; form and lexeme; lexeme and sense; sense and English gloss; concept and English word; translation and alignment; objective linguistic data and learner knowledge; learner knowledge and UI color; or provenance and confidence.
+Do not collapse:
+- language-world ontology profile and computational language pack;
+- objective language classification and learner variety preference;
+- Language and mandatory reference Dialect;
+- attested Language and ReconstructedLanguage epistemic status;
+- occurrence and form;
+- form and lexeme;
+- lexeme and sense;
+- sense and English gloss;
+- concept and English word;
+- translation and alignment;
+- objective linguistic data and learner knowledge;
+- learner knowledge and UI color;
+- provenance and confidence.
 
 ## Open-world principle
 
 Unknown is a valid state.
 
-A token may exist without a resolved lexeme. A lexeme may exist without a complete paradigm. A sense may exist without a cross-language equivalent. A construction may exist before a formal syntactic analysis is available.
+A Language may exist without a selected Dialect. A learner may request a broad historical scope before individual HistoricalStages are instantiated. A family relation may remain unresolved. A token may exist without a resolved lexeme. A lexeme may exist without a complete paradigm. A sense may exist without a cross-language equivalent. A construction may exist before a formal syntactic analysis is available.
 
 The model should absorb increasing knowledge without requiring destructive rewrites.
