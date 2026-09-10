@@ -5,6 +5,7 @@
 The human principal owns:
 - language-learning intent and priorities;
 - corpus selection and additions;
+- preferred dialects/standards/historical stages when they care to specify them;
 - taste and usability judgments;
 - local runtime observations;
 - final veto.
@@ -12,6 +13,7 @@ The human principal owns:
 ChatGPT in the director / architect / integrator role owns:
 - product philosophy and scope;
 - ontology and canonical terminology;
+- language/dialect classification conventions and explicit uncertainty;
 - architecture and subsystem boundaries;
 - corpus-to-knowledge workflow;
 - queue semantics and lifecycle;
@@ -23,6 +25,10 @@ Implementation workers may implement explicitly authorized macro-goals, add test
 
 Implementation workers may not silently:
 - redefine the ontology;
+- hide language/dialect classification ambiguity behind false certainty;
+- require a designated dialect before a Language can be used;
+- treat Dialect as inferior/corrupt Language;
+- turn a learner variety preference into an objective linguistic fact;
 - make English the universal linguistic model;
 - collapse token occurrences into lexemes;
 - collapse lexemes, senses, and forms;
@@ -30,9 +36,10 @@ Implementation workers may not silently:
 - force one-to-one alignment where languages encode meaning differently;
 - make GUI colors or flashcard fields canonical storage;
 - create one GitHub issue per word/token/analysis item;
+- bulk-populate language-world categories merely because they exist;
 - discard provenance or overwrite source snapshots;
 - redefine the active language universe;
-- invent cross-language relations without evidence;
+- invent cross-language or historical relations without evidence;
 - split architectural domains into new repositories;
 - ask the principal to download and execute ad hoc payloads for normal development or QA.
 
@@ -42,11 +49,25 @@ Follow sguzman/software-philosophy v1.3 unless this repository explicitly specia
 
 The repository is the durable shared mind. Important architectural decisions, queue contracts, data semantics, and acceptance criteria belong here rather than only in chat.
 
+## Language-world ontology rule
+
+Linguarium models languages themselves as ontology objects.
+
+Keep separate:
+- ontology entity profiles under ontology/ — what a language/family/dialect/writing system/historical stage is;
+- language packs under languages/ — what Linguarium can computationally do with a language/variety;
+- learner profiles under profiles/ — what the learner wants, knows, or currently prefers.
+
+The language/dialect boundary is treated as fuzzy and partly conventional/sociopolitical. Use docs/16-language-dialect-policy.md as the organizing rule. Record classification basis and dispute state where relevant.
+
+A Language does not require a selected Dialect. Variety specification is an optional learner privilege.
+
 ## High-volume work rule
 
 GitHub issues and repository macro-goals are for bounded engineering/integration objectives.
 
 High-volume linguistic work belongs in dedicated queues:
+- ontology intake queue;
 - corpus ingestion queue;
 - document-analysis queue;
 - lexeme integration queue;
@@ -80,7 +101,7 @@ A corpus is useful before every word is integrated. A lexeme is useful before ev
 
 ## Correction rule
 
-Semantic corrections preserve identity and lineage where possible. Do not mint a new entity merely to repair a bad gloss, analysis, or relation unless the earlier entity was genuinely a different thing.
+Semantic and classificatory corrections preserve identity and lineage where possible. Do not mint a new entity merely to repair a bad gloss, analysis, language/dialect classification, or relation unless the earlier entity was genuinely a different thing.
 
 ## Application stack rule
 
