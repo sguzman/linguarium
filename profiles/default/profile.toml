@@ -1,4 +1,4 @@
-schema_version = 2
+schema_version = 3
 id = "default"
 semantic_pivot = "en"
 salience_policy = "activity_derived"
@@ -7,6 +7,7 @@ salience_policy = "activity_derived"
 ui = "egui"
 show_ipa_by_default = false
 show_translation_by_default = false
+require_designated_variety = false
 
 [portfolio]
 non_english_soft_limit = 10
@@ -27,6 +28,10 @@ writing = "native_or_bilingual"
 id = "es"
 membership = "portfolio"
 
+[languages.targeting]
+preferred_variety_ids = ["ling:es-mx"]
+base_language_allowed = true
+
 [languages.proficiency.self_reported]
 reading = "fluent"
 listening = "fluent"
@@ -44,12 +49,22 @@ membership = "portfolio"
 [[languages]]
 id = "zh"
 membership = "portfolio"
-variety_resolution = "pending"
+
+[languages.targeting]
+preferred_labels = ["Mandarin Chinese"]
+resolution_state = "ontology_entity_pending"
+base_language_allowed = true
 
 [[languages]]
 id = "he"
 membership = "portfolio"
-variety_resolution = "pending"
+
+[languages.targeting]
+interest_scope = "historical"
+preferred_labels = ["Historical Hebrew"]
+resolution_state = "historical_stage_decomposition_pending"
+modern_variety_default = false
+base_language_allowed = true
 
 [[languages]]
 id = "ru"
@@ -62,7 +77,11 @@ membership = "portfolio"
 [[languages]]
 id = "ar"
 membership = "portfolio"
-variety_resolution = "pending"
+
+[languages.targeting]
+preferred_labels = ["Classical Arabic", "Modern Standard Arabic"]
+resolution_state = "ontology_entities_pending"
+base_language_allowed = true
 
 [[languages]]
 id = "it"
