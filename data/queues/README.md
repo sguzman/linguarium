@@ -4,6 +4,7 @@ These files bootstrap Linguarium's high-volume work contracts before the operati
 
 They are not intended to remain the final queue backend.
 
+- ontology-intake.toml — requested language-world entities not yet accepted into the ontology.
 - language-bootstrap.toml — language-level capability work created by activation.
 - corpus-intake.toml — raw source material waiting for snapshot creation.
 - corpus-analysis.toml — snapshots waiting for segmentation/tokenization/statistics.
