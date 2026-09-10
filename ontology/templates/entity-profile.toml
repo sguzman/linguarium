@@ -1,0 +1,55 @@
+schema_version = 1
+id = "ling:replace-me"
+category = "language"
+name = ""
+attestation_status = "unknown"
+classification_basis = "pending"
+classification_confidence = "unknown"
+classification_disputed = false
+
+[naming]
+endonyms = []
+alternative_names = []
+historical_names = []
+
+[scope]
+summary = ""
+geographic = []
+temporal = ""
+
+[classification]
+parent_entity_ids = []
+family_relation_status = "pending"
+
+[writing]
+writing_system_entity_ids = []
+pending_writing_system_labels = []
+
+[variation]
+designated_variety_required = false
+child_entity_ids = []
+internal_variation_expected = true
+
+[linguistic_profile]
+summary = ""
+major_grammatical_traits = []
+major_phonological_traits = []
+major_semantic_or_lexical_notes = []
+
+[historical_profile]
+summary = ""
+predecessor_entity_ids = []
+successor_entity_ids = []
+contact_entity_ids = []
+
+[ontology]
+profile_maturity = "minimal"
+open_questions = []
+
+[provenance]
+created_by = "director"
+creation_reason = ""
+review_state = "proposed"
+
+# Substantive claims should eventually move from free-text summaries into
+# typed provenance-bearing relations/facts as the ontology matures.
