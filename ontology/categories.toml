@@ -1,0 +1,47 @@
+schema_version = 1
+
+# Category declarations only. This file does not instantiate entities.
+
+[[categories]]
+id = "language_family"
+name = "LanguageFamily"
+instantiable = true
+
+[[categories]]
+id = "writing_system"
+name = "WritingSystem"
+instantiable = true
+
+[[categories]]
+id = "reconstructed_language"
+name = "ReconstructedLanguage"
+instantiable = true
+
+[[categories]]
+id = "language"
+name = "Language"
+instantiable = true
+
+[[categories]]
+id = "language_variety"
+name = "LanguageVariety"
+instantiable = false
+abstract = true
+
+[[categories]]
+id = "dialect"
+name = "Dialect"
+parent = "language_variety"
+instantiable = true
+
+[[categories]]
+id = "standard_variety"
+name = "StandardVariety"
+parent = "language_variety"
+instantiable = true
+
+[[categories]]
+id = "historical_stage"
+name = "HistoricalStage"
+parent = "language_variety"
+instantiable = true
