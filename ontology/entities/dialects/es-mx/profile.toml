@@ -1,0 +1,33 @@
+schema_version = 1
+id = "ling:es-mx"
+category = "dialect"
+name = "Mexican Spanish"
+endonym = "español mexicano"
+attestation_status = "attested"
+classification_basis = "conventional"
+classification_confidence = "working"
+classification_disputed = false
+parent_language_id = "ling:es"
+regional_scope = "Mexico"
+granularity = "national_variety_or_dialect_group"
+
+[variation]
+internal_variation_expected = true
+notes = "Mexican Spanish is modeled as a broad national/regional variety of Spanish. The label does not imply complete internal uniformity. More local Mexican varieties may later be instantiated beneath or alongside it when useful."
+
+[writing]
+primary_writing_system_label = "Latin script"
+writing_system_entity_status = "not_yet_instantiated"
+
+[ontology]
+profile_maturity = "minimal"
+lexicon_scope = "shared_spanish_plus_variety_specific_extensions"
+grammar_scope = "spanish_shared_structure_plus_variety_specific_extensions"
+
+[relations]
+dialect_of = "ling:es"
+
+[provenance]
+created_by = "director"
+creation_reason = "explicit_principal_request"
+review_state = "accepted_bootstrap"
