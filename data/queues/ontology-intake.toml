@@ -1,0 +1,44 @@
+schema_version = 1
+
+# Ontology-intake records request durable language-world entity profiles.
+# They are not yet accepted ontology instances.
+
+[[items]]
+id = "ontake-mandarin"
+state = "queued"
+priority = 80
+requested_category = "language_variety"
+parent_language_registry_id = "zh"
+label = "Mandarin Chinese"
+reason = "learner_preferred_variety"
+classification_question = "Resolve whether the learner target should be Mandarin broadly or a more specific Standard Mandarin variety."
+
+[[items]]
+id = "ontake-classical-arabic"
+state = "queued"
+priority = 80
+requested_category = "historical_stage"
+parent_language_registry_id = "ar"
+label = "Classical Arabic"
+reason = "learner_preferred_stage"
+classification_question = "Model as historical/literary stage while preserving relation to later standard Arabic."
+
+[[items]]
+id = "ontake-msa"
+state = "queued"
+priority = 80
+requested_category = "standard_variety"
+parent_language_registry_id = "ar"
+label = "Modern Standard Arabic"
+reason = "learner_preferred_standard"
+classification_question = "Model as contemporary standard variety rather than forcing it into regional dialect classification."
+
+[[items]]
+id = "ontake-historical-hebrew"
+state = "queued"
+priority = 80
+requested_category = "historical_stage"
+parent_language_registry_id = "he"
+label = "Historical Hebrew"
+reason = "learner_historical_interest"
+classification_question = "Decompose broad historical interest into attested stages such as Biblical, Mishnaic, and Medieval Hebrew when useful; do not make Modern Hebrew the default learner target."
