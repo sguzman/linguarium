@@ -4,11 +4,34 @@ Linguarium does not use one giant flat universal ontology, and it does not give 
 
 It uses layered ontology.
 
-## Layer 1 — Shared metamodel
+## Layer 0 — Language-world ontology
 
-This layer defines the kinds of things Linguarium knows how to represent:
+This layer models languages themselves as objects in a historical and sociolinguistic world.
 
-- Language / Variety;
+It includes categories such as:
+- LanguageFamily;
+- WritingSystem;
+- ReconstructedLanguage;
+- Language;
+- LanguageVariety;
+- Dialect;
+- StandardVariety;
+- HistoricalStage.
+
+This layer answers questions such as:
+- What is Spanish?
+- What varieties belong under it?
+- What historical stages does Hebrew have?
+- Which writing systems does a language use?
+- Which family relations are asserted?
+- Which ancestral systems are reconstructed rather than directly attested?
+
+See docs/15-language-world-ontology.md and docs/16-language-dialect-policy.md.
+
+## Layer 1 — Shared linguistic metamodel
+
+This layer defines the kinds of linguistic things Linguarium knows how to represent:
+
 - Lexeme;
 - Sense;
 - Form;
@@ -56,6 +79,8 @@ Lexemes and senses are inherently language-local entities.
 
 Syntax is primarily language-local too: the shared metamodel can represent constructions and relations, but a language decides which structures exist and how they behave.
 
+A Dialect, StandardVariety, or HistoricalStage may inherit much of its parent Language's local ontology and add, override, or constrain only what differs.
+
 ## Layer 3 — Cross-language semantic/comparative graph
 
 Languages are reconciled by relations, not by forced merger.
@@ -67,6 +92,8 @@ Spanish Sense ── translation/semantic relation ── English Sense
 German Sense  ── concept relation ─────────────── Concept
 Latin Lexeme  ── etymological relation ───────── Spanish Lexeme
 Sentence Span ── alignment ───────────────────── Target Span
+Mexican Spanish ── dialect_of ────────────────── Spanish
+Biblical Hebrew ── historical_stage_of ───────── Hebrew
 ~~~
 
 A cross-language relation can express:
@@ -78,7 +105,10 @@ A cross-language relation can express:
 - borrowing;
 - syntactic analogy;
 - morphological analogy;
-- pedagogical comparison.
+- pedagogical comparison;
+- family membership;
+- dialect/standard/historical-stage relations;
+- writing-system usage.
 
 ## Reconciliation rule
 
@@ -97,17 +127,21 @@ Two languages can organize similar semantic territory differently. That differen
 Adding a language must not require redesigning the universal model unless the language reveals a genuine modeling failure.
 
 Normally activation should require:
-- a manifest;
+- a registry entry;
+- an ontology profile when demanded;
+- a language pack;
 - capability-state entries;
 - language-local feature/construction declarations;
 - source/analyzer declarations;
 - incremental enrichment.
 
+A designated dialect is optional. Missing variety choice is valid state.
+
 If adding an ordinary new language repeatedly requires application code changes, the architecture is failing.
 
 ## Extensibility test
 
-A new language may:
+A new language or variety may:
 - instantiate existing shared entity types;
 - add language-local feature values and constructions;
 - expose missing shared abstractions.
