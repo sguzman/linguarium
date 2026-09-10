@@ -1,0 +1,39 @@
+schema_version = 1
+id = "ling:es"
+category = "language"
+name = "Spanish"
+endonym = "español"
+attestation_status = "attested"
+classification_basis = "conventional"
+classification_confidence = "working"
+classification_disputed = false
+scope = "umbrella_language"
+
+[external_identifiers]
+iso_639_1 = "es"
+
+[variation]
+designated_dialect_required = false
+internal_variation_expected = true
+notes = "Spanish is modeled as the umbrella Language node. Regional/national varieties are subordinate variety entities rather than defective forms of a single central dialect."
+
+[writing]
+primary_writing_system_label = "Latin script"
+writing_system_entity_status = "not_yet_instantiated"
+
+[classification]
+family_relation_status = "not_yet_instantiated"
+working_family_labels = ["Indo-European", "Italic", "Romance"]
+
+[ontology]
+profile_maturity = "minimal"
+lexicon_scope = "operational_database"
+grammar_scope = "language_pack_and_operational_database"
+
+[relations]
+known_dialect_ids = ["ling:es-mx"]
+
+[provenance]
+created_by = "director"
+creation_reason = "explicit_principal_request"
+review_state = "accepted_bootstrap"
