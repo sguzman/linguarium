@@ -1,8 +1,12 @@
-schema_version = 1
+schema_version = 2
 id = "es"
 name = "Spanish"
 status = "bootstrap"
 role_hint = "reference"
+
+[ontology]
+entity_id = "ling:es"
+profile = "ontology/entities/languages/es/profile.toml"
 
 [bootstrap]
 identity = "usable"
@@ -17,3 +21,7 @@ analysis_capabilities = "absent"
 
 [orthography]
 primary_script = "Latn"
+
+[varieties]
+designated_variety_required = false
+overlay_packs_allowed = true
