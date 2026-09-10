@@ -1,0 +1,26 @@
+schema_version = 1
+id = "es-mx"
+name = "Mexican Spanish"
+status = "bootstrap"
+kind = "dialect_overlay"
+parent_pack = "languages/es"
+
+[ontology]
+entity_id = "ling:es-mx"
+profile = "ontology/entities/dialects/es-mx/profile.toml"
+
+[inheritance]
+inherit_parent_grammar = true
+inherit_parent_lexicon = true
+inherit_parent_orthography = true
+override_only_differences = true
+
+[bootstrap]
+variety_specific_lexicon = "absent"
+variety_specific_pronunciation = "absent"
+variety_specific_usage = "absent"
+variety_specific_constructions = "absent"
+variety_specific_sources = "absent"
+
+[notes]
+summary = "Learner-preferred Spanish variety. This overlay specializes the shared Spanish pack only where Mexican usage materially differs."
